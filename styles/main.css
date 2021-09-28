@@ -4,22 +4,29 @@
   --vertical-space: 2rem;
   --horizontal-space: 3rem;
 
-  --light-color: 97,255,229;
-  --body-color: #0E2663;
-  --heading-color: #444FB4;
-  --contrast-color: #5766E6;
+  --light-color: 35,197,184;
+  --body-color: #1F2580;
+  --heading1-color: #4F20AB;
+  --heading-color: #2263B3;
+  --contrast-color: #8420A8;
 }
 
 body {
   font-size: 18px;
   line-height: 1.5em;
   font-family: 'Montserrat', sans-serif;
-  background-color: rgba(var(--light-color), .9);
+  background-color: rgba(var(--light-color), .6);
   background-image: url("https://www.transparenttextures.com/patterns/bright-squares.png");
   color: var(--body-color);
 }
 
-h1, h2, h3 {
+h1 {
+  line-height: 1.2em;
+  font-family: 'Kalam', cursive;
+  color: var(--heading1-color);
+}
+
+h2, h3 {
   line-height: 1.2em;
   font-family: 'Kalam', cursive;
   color: var(--heading-color);
@@ -48,7 +55,7 @@ body {
                        "nav  nav "
                        "main main"
                        "foot foot";
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: auto 4fr;
   grid-template-rows: auto auto 1fr auto;
 }
 
@@ -57,6 +64,7 @@ body {
     grid-template-areas: "head head"
                          "nav  main"
                          "foot foot";
+    grid-template-rows: auto 1fr auto;
   }
 }
 

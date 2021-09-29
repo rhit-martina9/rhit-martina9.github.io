@@ -1,3 +1,4 @@
+// Used https://webdesign.tutsplus.com/tutorials/animate-on-scroll-with-javascript--cms-36671 for base of code
 const scrollElementsLeft = document.querySelectorAll(".js-scroll-left");
 const scrollElementsRight = document.querySelectorAll(".js-scroll-right");
 

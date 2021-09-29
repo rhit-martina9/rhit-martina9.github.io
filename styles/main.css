@@ -174,3 +174,16 @@ body#portfolio ul#portfolioItems li img {
     font-size: 1.4em;
   }
 }
+
+.js-scroll-left, .js-scroll-right {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+.js-scroll-left.scrolled, .js-scroll-right.scrolled {
+  opacity: 1;
+}
+
+.scrolled.fade-in {
+  animation: fade-in 1s ease-in-out both;
+}

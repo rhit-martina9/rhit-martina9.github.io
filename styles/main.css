@@ -6,8 +6,8 @@
 
   --light-color: 35,197,184;
   --body-color: #1F2580;
-  --heading1-color: #4F20AB;
-  --heading-color: #2263B3;
+  --heading-color: #4F20AB;
+  --subheading-color: #2263B3;
   --contrast-color: #8420A8;
 }
 
@@ -22,14 +22,14 @@ body {
 
 h1 {
   line-height: 1.2em;
-  font-family: 'Kalam', cursive;
-  color: var(--heading1-color);
+  font-family: cursive;
+  color: var(--heading-color);
 }
 
 h2, h3 {
   line-height: 1.2em;
-  font-family: 'Kalam', cursive;
-  color: var(--heading-color);
+  font-family: cursive;
+  color: var(--subheading-color);
 }
 
 a {
@@ -43,10 +43,10 @@ a:hover {
 
 body#about img {
   height: 15em;
-}
-
-p {
-  max-width: 50em;
+  margin: auto;
+  display: block;
+  box-shadow: -3px 5px 7px 0px rgba(0,0,0,0.74);
+  border: 2px solid var(--subheading-color);
 }
 
 body {
@@ -65,6 +65,14 @@ body {
                          "nav  main"
                          "foot foot";
     grid-template-rows: auto 1fr auto;
+  }
+
+  body#about img {
+    height: 15em;
+    display: inline;
+    float: left;
+    margin-right: var(--horizontal-space);
+    margin-bottom: var(--vertical-space);
   }
 }
 
@@ -86,6 +94,11 @@ body > nav ul {
   padding: 0;
 }
 
+body > nav ul li {
+  display: inline-block;
+  padding: 0 7px;
+}
+
 body > main {
   grid-area: main;
 }
@@ -94,9 +107,20 @@ body > footer {
   grid-area: foot;
 }
 
-header, footer {
+p {
+  max-width: 50em;
+}
+
+header {
   padding-top: var(--vertical-space);
+}
+
+footer {
   padding-bottom: var(--vertical-space);
+}
+
+footer a {
+  text-decoration: none;
 }
 
 header h1, footer h1 {
@@ -111,13 +135,42 @@ body#portfolio ul#portfolioItems {
   padding: 0;
 }
 
+body#portfolio ul#portfolioItems li img {
+  max-width: 100%;
+}
+
 @media screen and (min-width: 25em) {
   body#portfolio ul#portfolioItems li {
     flex-basis: 48%;
     padding-right: 2%;
   }
+
+  body > nav ul li {
+    display: list-item;
+  }
 }
 
-body#portfolio ul#portfolioItems li img {
-  max-width: 100%;
+@media screen and (min-width: 125em) {
+  body#portfolio ul#portfolioItems li {
+    flex-basis: 25%;
+    padding-right: 2%;
+  }
+  p, #resume dl{
+    max-width: 38em;
+    line-height: 1.5em;
+    font-size: 1.25em;
+  }
+  #resume ul{
+    line-height: 1.5em;
+    font-size: 1.5rem;
+  }
+  #resume h1, #resume h2, #resume h3, #portfolio h2 {
+    line-height: 1.5em;
+  }
+  #resume h2 {
+    font-size: 1.75em;
+  }
+  #resume h3 {
+    font-size: 1.4em;
+  }
 }
